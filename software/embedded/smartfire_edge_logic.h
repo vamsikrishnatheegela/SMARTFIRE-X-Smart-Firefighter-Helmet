@@ -20,3 +20,14 @@ typedef struct {
 void SmartfireEdge_Init(void);
 SmartfireEdgeOutput SmartfireEdge_Evaluate(const SmartfireEdgeInput *in);
 #endif
+
+
+/*
+ * INTERFACE NOTES
+ * ---------------
+ * Validity flags indicate whether each sensor channel contains a usable
+ * reading. A numeric zero is therefore not used to represent missing data.
+ * risk_level encoding: 0 = NORMAL, 1 = GUARDED, 2 = HIGH, 3 = CRITICAL.
+ * score is a prototype rule score, not a probability or calibrated confidence.
+ * Keep this header synchronized with smartfire_edge_logic.c.
+ */
