@@ -40,3 +40,16 @@ SmartfireEdgeOutput SmartfireEdge_Evaluate(const SmartfireEdgeInput *in)
     previous_level = out.risk_level;
     return out;
 }
+
+
+/*
+ * MAINTAINER NOTES
+ * ----------------
+ * - Keep the thresholds in this prototype aligned with the documented
+ *   prototype thresholds in the Python risk engine when intentionally changed.
+ * - The MQ-2 input is an ADC reading; it does not identify a particular gas.
+ * - This function is a reference implementation and is not safety-certified.
+ * - Before integrating into STM32 firmware, validate units, ADC scaling,
+ *   sensor fault handling, execution time, and behavior under missing data.
+ * - Preserve these notes and the inline comments when extending this module.
+ */
