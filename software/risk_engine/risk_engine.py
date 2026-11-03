@@ -92,3 +92,15 @@ class RiskEngine:
         if stale: reasons.append("Telemetry gap detected before this packet")
         if not reasons: reasons.append("No configured prototype risk rules triggered")
         return RiskResult(level, score, confidence, reasons, data_quality, stale)
+
+
+# MAINTAINER NOTES
+# ----------------
+# The thresholds and score weights below are prototype rules, not certified
+# exposure limits, medical thresholds, or a validated fire-detection model.
+# MQ-2 values are raw sensor/ADC readings and must not be interpreted as a
+# selective measurement of a named gas.
+# confidence represents data coverage/quality only; it is not the probability
+# that a fire or hazardous condition exists.
+# Preserve these comments when tuning rules so future contributors understand
+# the assumptions and limitations behind each threshold.
