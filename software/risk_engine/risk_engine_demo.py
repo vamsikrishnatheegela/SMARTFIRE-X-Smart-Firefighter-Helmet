@@ -12,3 +12,10 @@ for i, packet in enumerate(samples, 1):
     result = engine.evaluate(packet, time.time() + i)
     print(f"\nSample {i}: {json.dumps(packet)}")
     print(json.dumps(result.to_dict(), indent=2))
+
+
+# DEMO NOTES
+# ----------
+# These are illustrative synthetic packets for exercising the rule engine.
+# They are not recorded field data and do not validate real-world safety.
+# Keep this demo small and reproducible when adding new example scenarios.
