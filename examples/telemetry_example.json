@@ -1,0 +1,13 @@
+{
+  "device": "SMARTFIRE-X",
+  "temp_c": 30.5,
+  "ambient_c": 30.4,
+  "humidity_pct": 73.8,
+  "light_lux": 81.6,
+  "co2_ppm": 701,
+  "bpm": null,
+  "spo2_pct": null,
+  "distance_cm": 5.7,
+  "mq2_raw": 674,
+  "pir": true
+}
